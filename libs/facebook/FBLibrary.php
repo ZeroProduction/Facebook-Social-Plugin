@@ -13,7 +13,7 @@ class FBLibrary
 	//put your code here
 	
 	protected $_title		= NULL;
-	protected $_container	= NULL;
+	protected $_current		= NULL;
 	protected $_extension	= '.php'; 
 	
 	public function __construct($title) 
@@ -45,7 +45,7 @@ class FBLibrary
 		
 		require_once $full_path;
 				
-		$this->_container[$key] = new $name($this);
+		$this->_current = new $name($this);
 		
 		// For assigning values to object
 		
@@ -58,9 +58,9 @@ class FBLibrary
 		
 		if ($render) 
 		{
-			var_dump($this->_container[$key]);
+			var_dump($this->_current);
 			
-			return $this->_container[$key]->render($key);
+			return $this->_current->render($key);
 		}
 		return $this;
 	}
@@ -77,7 +77,7 @@ class FBLibrary
 	{
 		foreach ($component as $key => $value) 
 		{
-			$this->_container[$object_name]->Set($key, $value);
+			$this->_current->Set($key, $value);
 		}
 		
 		return $this;

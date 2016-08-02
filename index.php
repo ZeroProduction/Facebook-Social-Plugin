@@ -70,7 +70,7 @@
 			<div class="col-xs-12 col-md-6">
 
 			<?php
-				$fb->requireComponent('like', true);
+				$fb->requireComponent('share', true);
 			?>
 			</div>
 		</div>
