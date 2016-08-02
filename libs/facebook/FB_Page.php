@@ -10,15 +10,15 @@ class FB_Page extends FBLibrary implements IFB
 {
 	//put your code here
 
-	protected $_href					= 'https://www.facebook.com/Zero-Production-O&#xdc;-571844476296573/';
-	protected $_width					= NULL;
-	protected $_height					= NULL;
-	protected $_tabs					= NULL;
-	protected $_hide_cover				= NULL;
-	protected $_show_facepile			= NULL;
-	protected $_hide_cta				= NULL;
-	protected $_small_header			= NULL;
-	protected $_adapt_container_width	= NULL;
+	protected $href						= 'https://www.facebook.com/Zero-Production-O&#xdc;-571844476296573/';
+	protected $width					= 340;
+	protected $height					= 500;
+	protected $tabs						= 'timeline';
+	protected $hide_cover				= false;
+	protected $show_facepile			= true;
+	protected $hide_cta					= false;
+	protected $small_header				= false;
+	protected $adapt_container_width	= true;
 	
 	public function render($component) 
 	{
@@ -27,13 +27,8 @@ class FB_Page extends FBLibrary implements IFB
 
 	public function set($key, $value)
 	{
-		isset($this->_{$key}) ? $this->_{$key} = $value : NULL;
+		isset($this->{$key}) ? $this->{$key} = $value : NULL;
 		return $this;
-	}
-	
-	public function Get($key) 
-	{
-		return isset($this->_{$key}) ? $this->_{$key} : NULL;
 	}
 
 }

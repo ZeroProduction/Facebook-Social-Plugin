@@ -10,28 +10,24 @@ class FB_Follow extends FBLibrary implements IFB
 {
 	//put your code here
 
-	protected $_colorscheme			= NULL;
-	protected $_href				= NULL;
-	protected $_kid_directed_site	= NULL;
-	protected $_layout				= NULL;
-	protected $_show_faces			= NULL;
-	protected $_size				= NULL;
-	protected $_width				= NULL;
+	protected $colorscheme			= 'light';
+	protected $href					= 'https://www.facebook.com/zuck';
+	protected $kid_directed_site	= false;
+	protected $layout				= 'standard';
+	protected $show_faces			= true;
+	protected $size					= 'small';
+	protected $width				= 400;
+	protected $height				= 100;
 	
 	public function render($component) 
 	{
-		return parent::render($component);
+		parent::render($component);
 	}
 
 	public function set($key, $value)
 	{
-		isset($this->_{$key}) ? $this->_{$key} = $value : NULL;
+		isset($this->{$key}) ? $this->{$key} = $value : NULL;
 		return $this;
-	}
-	
-	public function Get($key) 
-	{
-		return isset($this->_{$key}) ? $this->_{$key} : NULL;
 	}
 
 }

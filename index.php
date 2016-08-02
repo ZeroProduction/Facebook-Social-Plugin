@@ -55,22 +55,28 @@
 		}(document, 'script', 'facebook-jssdk'));</script>
 		
 		<div class="container">
-			<div class="col-xs-12 col-md-6">
+			<div class="col-xs-12 col-md-12">
 			<?php
 				$fb->requireComponent([
-					'page' => 
-					[
-						'width' => '200',
-						'height' => '200',
-						
-					]
+					'page' => [
+						//'width' => 300,
+						//'height' => 300,
+						'show_facepile' => false,
+						'tabs' => 'timeline, events, messages',
+					],
 				], true);
 			?>
 			</div>
 			<div class="col-xs-12 col-md-6">
 
 			<?php
-				$fb->requireComponent('share', true);
+				$fb->requireComponent('follow', true);
+			?>
+			</div>
+			<div class="col-xs-12 col-md-6">
+
+			<?php
+				$fb->requireComponent('like', true);
 			?>
 			</div>
 		</div>

@@ -10,16 +10,17 @@ class FB_Like extends FBLibrary
 {
 	//put your code here
 	
-	protected $_action				= NULL;
-	protected $_colorscheme			= NULL;
-	protected $_href				= NULL;
-	protected $_kid_directed_site	= NULL;
-	protected $_layout				= NULL;
-	protected $_ref					= NULL;
-	protected $_share				= NULL;
-	protected $_show_faces			= NULL;
-	protected $_size				= NULL;
-	protected $_width				= NULL;
+	protected $action				= 'like';
+	protected $colorscheme			= 'light';
+	protected $href					= 'https://developers.facebook.com/docs/plugins/';
+	protected $kid_directed_site	= 'false';
+	protected $layout				= 'standard';
+	protected $ref					= NULL;
+	protected $share				= true;
+	protected $show_faces			= true;
+	protected $size					= 'small';
+	protected $height				= NULL;
+	protected $width				= NULL;
 	
 	public function render($component) 
 	{
@@ -28,13 +29,8 @@ class FB_Like extends FBLibrary
 
 	public function set($key, $value)
 	{
-		isset($this->_{$key}) ? $this->_{$key} = $value : NULL;
+		isset($this->{$key}) ? $this->{$key} = $value : NULL;
 		return $this;
-	}
-	
-	public function Get($key) 
-	{
-		return isset($this->_{$key}) ? $this->_{$key} : NULL;
 	}
 	
 }

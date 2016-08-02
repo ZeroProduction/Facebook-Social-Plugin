@@ -1,16 +1,15 @@
 <?php ?>
 
-<iframe 
-	<?php if ($this->Get('src')): ?>
-		src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=1519919508268659" 
-	<?php endif; ?>
-	src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=1519919508268659" 
-	width="450" 
-	height="80" 
-	style="border:none;overflow:hidden" 
-	scrolling="no" 
-	frameborder="0" 
-	allowTransparency="true"
-	
-	>
-</iframe>
+<div class="fb-like" 
+	 data-href="<?php echo $this->href; ?>" 
+	 data-colorscheme="<?php echo $this->colorscheme; ?>" 
+	 data-kid-directed-site="<?php echo $this->kid_directed_site; ?>" 
+	 data-layout="<?php echo $this->layout; ?>" 
+	 data-action="<?php echo $this->action; ?>" 
+	 data-size="<?php echo $this->size; ?>" 
+	 data-width="<?php echo $this->width; ?>" 
+	 data-ref="<?php echo $this->ref; ?>" 
+	 data-show-faces="<?php echo $this->show_faces; ?>" 
+	data-share="<?php echo $this->share; ?>">
+		 
+</div>

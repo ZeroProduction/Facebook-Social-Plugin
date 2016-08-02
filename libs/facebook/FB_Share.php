@@ -10,10 +10,10 @@ class FB_Share extends FBLibrary implements IFB
 {
 	//put your code here
 
-	protected $_href				= NULL;
-	protected $_layout				= NULL;
-	protected $_mobile_iframe		= false;
-	protected $_size				= NULL;
+	protected $href				= NULL;
+	protected $layout			= NULL;
+	protected $mobile_iframe	= false;
+	protected $size				= NULL;
 	
 	public function render($component) 
 	{
@@ -22,13 +22,8 @@ class FB_Share extends FBLibrary implements IFB
 
 	public function set($key, $value)
 	{
-		isset($this->_{$key}) ? $this->_{$key} = $value : NULL;
+		isset($this->{$key}) ? $this->{$key} = $value : NULL;
 		return $this;
-	}
-	
-	public function Get($key) 
-	{
-		return isset($this->_{$key}) ? $this->_{$key} : NULL;
 	}
 
 }

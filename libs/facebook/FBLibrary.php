@@ -58,8 +58,6 @@ class FBLibrary
 		
 		if ($render) 
 		{
-			var_dump($this->_current);
-			
 			return $this->_current->render($key);
 		}
 		return $this;
@@ -75,9 +73,9 @@ class FBLibrary
 	
 	private function _assign(Array $component, $object_name) 
 	{
-		foreach ($component as $key => $value) 
+		foreach ($component[$object_name] as $key => $value) 
 		{
-			$this->_current->Set($key, $value);
+			$this->_current->set($key, $value);
 		}
 		
 		return $this;
