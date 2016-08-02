@@ -30,7 +30,7 @@
 
 	// Create FBLibrary object	
 	
-	$fb = new FBLibrary('Zero Production OÜ', ABSOLUTE_LIBS, ABSOLUTE_VIEW); 
+	$fb = new FBLibrary('ZeroProduction', ABSOLUTE_LIBS, ABSOLUTE_VIEW); 
 
 ?>
 
@@ -43,7 +43,14 @@
 		
 		<link href="public/bootstrap-3.1.1-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
 		<link href="public/bootstrap-3.1.1-dist/css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
-    </head>
+    
+		<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Your Website Title" />
+		<meta property="og:description"   content="Your description" />
+		<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />	
+	
+	</head>
     <body>
 		<div id="fb-root"></div>
 		<script>(function(d, s, id) {

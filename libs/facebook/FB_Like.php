@@ -12,7 +12,7 @@ class FB_Like extends FBLibrary
 	
 	protected $action				= 'like';
 	protected $colorscheme			= 'light';
-	protected $href					= 'https://developers.facebook.com/docs/plugins/';
+	protected $href					= 'http://delfi.ee/';
 	protected $kid_directed_site	= 'false';
 	protected $layout				= 'standard';
 	protected $ref					= NULL;
